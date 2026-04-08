@@ -29,7 +29,7 @@ function login() {
     if (user === "admin" && pass === "1234") {
         localStorage.setItem("loggedIn", "true");
         document.getElementById("message").innerText = "Login Successful!"; 
-        // window.location.href = "dashboard.html";
+        window.location.href = "dashboard.html";
 
     } else if(user === "") {
         document.getElementById("message").innerText = "Please enter username!";
