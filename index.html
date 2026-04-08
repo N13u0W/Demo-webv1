@@ -22,7 +22,7 @@ function login() {
     let pass = document.getElementById("password").value;
 
     if (user === "" && pass === "") {
-        document.getElementById("message").innerText = "Please fill all fields!";
+        document.getElementById("message").innerText = "Please enter username and password!";
         return;
     }
 
@@ -30,10 +30,13 @@ function login() {
         localStorage.setItem("loggedIn", "true");
         document.getElementById("message").innerText = "Login Successful!"; 
         // window.location.href = "dashboard.html";
+
     } else if(user === "") {
         document.getElementById("message").innerText = "Please enter username!";
+
     } else if(pass === "") {
         document.getElementById("message").innerText = "Please enter password!";
+
     } else {
         document.getElementById("message").innerText = "Invalid credentials!";
     }
